@@ -1,0 +1,20 @@
+﻿@model IEnumerable<PoolSaison2019.Models.Participant>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Participants";
+}
+
+<h1>Liste des participants</h1>
+@foreach (var item in Model)
+{
+    <div>
+        <span><B>No:</B> @Html.DisplayFor(modelItem => item.Id) </span>
+        <span><B>Name:</B> @Html.DisplayFor(modelItem => item.Nom) </span>
+        <span><B>Gains:</B> @Html.DisplayFor(modelItem => item.Gains) </span>
+        <span><B>Rang:</B> @Html.DisplayFor(modelItem => item.Rang) </span>
+        <span><b>Rang de la semaine passé:</b> @Html.DisplayFor(modelItem => item.LastWeekRank) </span>
+        <br />
+    </div>
+}
